@@ -1,0 +1,11 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    cn_statusboard_employee_id:
+        label: Employee
+    status:
+        label: Status
+    created_at:
+        label: Date

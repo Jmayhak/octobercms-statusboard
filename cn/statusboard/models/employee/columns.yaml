@@ -1,0 +1,11 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+    full_name:
+        label: Full Name
+    personal_phone:
+        label: Personal Phone

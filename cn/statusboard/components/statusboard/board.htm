@@ -1,0 +1,29 @@
+{% for row in employees|batch(4) %}
+<div class="row">
+    {% for employee in row %}
+    <div class="cn-statusboard col-sm-3 well well-sm cn-statusboard-{{ employee.status }} cn-statusboard-employee" data-employee-id="{{ employee.id }}"
+         data-employee-full-name="{{ employee.full_name }}"
+         data-employee-personal-phone="{{ employee.personal_phone }}"
+         data-employee-comment="{{ employee.comment }}"
+         data-employee-status="{{ employee.status }}">
+        <h3>{{ employee.full_name }}</h3>
+
+        <table class="table">
+            <tr>
+                <td>{% if employee.status == 'pto' %}
+                    PTO
+                    {% elseif employee.status == 'away' %}
+                    Out of Office
+                    {% elseif employee.status == 'otl' %}
+                    Out to Lunch
+                    {% else %}
+                    In Office
+                    {% endif %}
+                </td>
+                <td>{{ employee.personal_phone }}</td>
+            </tr>
+        </table>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}

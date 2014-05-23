@@ -1,0 +1,9 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    full_name:
+        label: Full Name
+    personal_phone:
+        label: Personal Phone
