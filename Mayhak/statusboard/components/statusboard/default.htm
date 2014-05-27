@@ -1,0 +1,45 @@
+<div id="cnStatusBoardEmployeeList">
+    {% partial "statusBoard::board" %}
+</div>
+
+<div id="cnStatusBoardModal">
+    <div class="container">
+        <div class="row">
+            <h1 id="cnStatusBoardEmployeeFullName"></h1>
+            <div class="col-sm-3 cn-statusboard well well-sm cn-statusboard-active cn-statusboard-update"
+                 data-employee-status="active">
+                <h4><i class="fa fa-desktop"></i> In Office</h4>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-3 cn-statusboard well well-sm cn-statusboard-otl cn-statusboard-update"
+                 data-employee-status="otl">
+                <h4><i class="fa fa-cutlery"></i> Out to Lunch</h4>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-3 cn-statusboard well well-sm cn-statusboard-pto cn-statusboard-update"
+                 data-employee-status="pto">
+                <h4><i class="fa fa-beer"></i> Paid Time Off</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 cn-statusboard well well-sm cn-statusboard-away cn-statusboard-update"
+                 data-employee-status="away">
+                <h4><i class="fa fa-clock-o"></i> Out of Office</h4>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-sm-3 cn-statusboard well well-sm cn-statusboard-cancel">
+                <h4><i class="fa fa-times"></i> Cancel</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cnStatusBoardFade"></div>

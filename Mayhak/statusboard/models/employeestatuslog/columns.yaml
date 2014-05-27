@@ -1,0 +1,17 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+      label: ID
+    cn_statusboard_employee_id:
+        label: Employee
+        select: (select cn_statusboard_employees.full_name from cn_statusboard_employees where cn_statusboard_employees.id = cn_statusboard_employee_status_logs.cn_statusboard_employee_id)
+    status:
+        label: Status
+        select: case when status = 'active' then 'In Office' when status = 'away' then 'Out of Office' when status = 'pto' then 'Paid Time Off' when status = 'otl' then 'Out to Lunch' else status end
+    created_at:
+        label: Date
+        type: datetime
+        format: l F jS Y h:i:s A
