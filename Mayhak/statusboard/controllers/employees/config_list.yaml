@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: @/plugins/cn/statusboard/models/employee/columns.yaml
+list: @/plugins/Mayhak/statusboard/models/employee/columns.yaml
 
 # Model Class name
-modelClass: Cn\StatusBoard\Models\Employee
+modelClass: Mayhak\StatusBoard\Models\Employee
 
 # List Title
 title: Manage Employees
 
 # Link URL for each record
-recordUrl: cn/statusboard/employees/update/:id
+recordUrl: Mayhak/statusboard/employees/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

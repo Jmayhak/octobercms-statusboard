@@ -6,25 +6,25 @@
 name: EmployeeStatusLog
 
 # Model Form Field configuration
-form: @/plugins/cn/statusboard/models/employeestatuslog/fields.yaml
+form: @/plugins/Mayhak/statusboard/models/employeestatuslog/fields.yaml
 
 # Model Class name
-modelClass: Cn\StatusBoard\Models\EmployeeStatusLog
+modelClass: Mayhak\StatusBoard\Models\EmployeeStatusLog
 
 # Default redirect location
-defaultRedirect: cn/statusboard/employeestatuslogs
+defaultRedirect: Mayhak/statusboard/employeestatuslogs
 
 # Create page
 create:
     title: Create EmployeeStatusLogs
-    redirect: cn/statusboard/employeestatuslogs/update/:id
-    redirectClose: cn/statusboard/employeestatuslogs
+    redirect: Mayhak/statusboard/employeestatuslogs/update/:id
+    redirectClose: Mayhak/statusboard/employeestatuslogs
 
 # Update page
 update:
     title: Edit EmployeeStatusLogs
-    redirect: cn/statusboard/employeestatuslogs
-    redirectClose: cn/statusboard/employeestatuslogs
+    redirect: Mayhak/statusboard/employeestatuslogs
+    redirectClose: Mayhak/statusboard/employeestatuslogs
 
 # Preview page
 preview:

@@ -1,4 +1,4 @@
-<?php namespace Cn\StatusBoard\Controllers;
+<?php namespace Mayhak\StatusBoard\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -20,6 +20,6 @@ class EmployeeStatusLogs extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Cn.StatusBoard', 'statusboard', 'employeestatuslogs');
+        BackendMenu::setContext('Mayhak.StatusBoard', 'statusboard', 'employeestatuslogs');
     }
 }

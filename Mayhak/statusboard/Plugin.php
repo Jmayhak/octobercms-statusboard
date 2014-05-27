@@ -1,4 +1,4 @@
-<?php namespace Cn\StatusBoard;
+<?php namespace Mayhak\StatusBoard;
 
 use System\Classes\PluginBase;
 
@@ -17,8 +17,8 @@ class Plugin extends PluginBase
     {
         return [
             'name' => 'StatusBoard',
-            'description' => 'Display a status board for CN',
-            'author' => 'Cn',
+            'description' => 'Display a status board for your company',
+            'author' => 'Mayhak',
             'icon' => 'icon-tablet'
         ];
     }
@@ -26,7 +26,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            '\Cn\StatusBoard\Components\StatusBoard' => 'statusBoard'
+            '\Mayhak\StatusBoard\Components\StatusBoard' => 'statusBoard'
         ];
     }
 
@@ -35,22 +35,22 @@ class Plugin extends PluginBase
         return [
             'statusboard' => [
                 'label' => 'Status Board',
-                'url' => \Backend::url('cn/statusboard/employees'),
+                'url' => \Backend::url('mayhak/statusboard/employees'),
                 'icon' => 'icon-tablet',
-                'permissions' => ['cn.statusboard.*'],
+                'permissions' => ['mayhak.statusboard.*'],
                 'order' => 500,
 
                 'sideMenu' => [
                     'employees' => [
                         'label' => 'Employees',
-                        'url' => \Backend::url('cn/statusboard/employees'),
+                        'url' => \Backend::url('mayhak/statusboard/employees'),
                         'icon' => 'icon-smile-o',
-                        'permissions' => ['cn.statusboard.*']
+                        'permissions' => ['mayhak.statusboard.*']
                     ],
                     'logs' => [
                         'label' => 'Logs',
-                        'url' => \Backend::url('cn/statusboard/employeestatuslogs'),
-                        'permissions' => ['cn.statusboard.*'],
+                        'url' => \Backend::url('mayhak/statusboard/employeestatuslogs'),
+                        'permissions' => ['mayhak.statusboard.*'],
                         'icon' => 'icon-book'
                     ]
                 ]
@@ -61,7 +61,7 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'cn.statusboard.manage_status_board' => ['label' => 'Manage Status Board']
+            'mayhak.statusboard.manage_status_board' => ['label' => 'Manage Status Board']
         ];
     }
 

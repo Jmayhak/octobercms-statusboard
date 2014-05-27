@@ -1,8 +1,8 @@
-<?php namespace Cn\StatusBoard\Components;
+<?php namespace Mayhak\StatusBoard\Components;
 
 use Cms\Classes\ComponentBase;
-use Cn\StatusBoard\Models\Employee as Employee;
-use Cn\StatusBoard\Models\EmployeeStatusLog as Log;
+use Mayhak\StatusBoard\Models\Employee as Employee;
+use Mayhak\StatusBoard\Models\EmployeeStatusLog as Log;
 
 class StatusBoard extends ComponentBase
 {
@@ -52,8 +52,8 @@ class StatusBoard extends ComponentBase
     {
         $this->page['employees'] = $this->_getEmployees();
 
-        $this->controller->addCss('/plugins/cn/statusboard/assets/css/statusBoard.css');
-        $this->controller->addJs('/plugins/cn/statusboard/assets/javascript/statusBoard.js');
+        $this->controller->addCss('/plugins/mayhak/statusboard/assets/css/statusBoard.css');
+        $this->controller->addJs('/plugins/mayhak/statusboard/assets/javascript/statusBoard.js');
     }
 
     public function onEmployeeUpdate()

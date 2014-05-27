@@ -1,33 +1,33 @@
-div.cn-statusboard-active {
+div.mayhak-statusboard-active {
     background: #6CA57E;
     cursor: pointer;
 }
 
-div.cn-statusboard-pto {
+div.mayhak-statusboard-pto {
     background: #D8BE62;
     cursor: pointer;
 }
 
-div.cn-statusboard-otl {
+div.mayhak-statusboard-otl {
     background: #F2D0A5;
     cursor: pointer;
 }
 
-div.cn-statusboard-away {
+div.mayhak-statusboard-away {
     background: #F09F67;
     cursor: pointer;
 }
 
-div.cn-statusboard-cancel {
+div.mayhak-statusboard-cancel {
     background: #BF2D21;
     cursor: pointer;
 }
 
-#cnStatusBoardModal ul {
+#mayhakStatusBoardModal ul {
     list-style-type: none;
 }
 
-#cnStatusBoardModal {
+#mayhakStatusBoardModal {
     display: none;
     position: absolute;
     padding: 25px;
@@ -42,7 +42,7 @@ div.cn-statusboard-cancel {
     margin: auto;
 }
 
-#cnStatusBoardFade {
+#mayhakStatusBoardFade {
     display: none;
     position: absolute;
     left: 0;

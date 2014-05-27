@@ -1,7 +1,7 @@
 {% for row in employees|batch(4) %}
 <div class="row">
     {% for employee in row %}
-    <div class="cn-statusboard col-sm-3 well well-sm cn-statusboard-{{ employee.status }} cn-statusboard-employee" data-employee-id="{{ employee.id }}"
+    <div class="mayhak-statusboard col-sm-3 well well-sm mayhak-statusboard-{{ employee.status }} mayhak-statusboard-employee" data-employee-id="{{ employee.id }}"
          data-employee-full-name="{{ employee.full_name }}"
          data-employee-personal-phone="{{ employee.personal_phone }}"
          data-employee-comment="{{ employee.comment }}"

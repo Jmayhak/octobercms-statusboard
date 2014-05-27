@@ -6,25 +6,25 @@
 name: Employee
 
 # Model Form Field configuration
-form: @/plugins/cn/statusboard/models/employee/fields.yaml
+form: @/plugins/Mayhak/statusboard/models/employee/fields.yaml
 
 # Model Class name
-modelClass: Cn\StatusBoard\Models\Employee
+modelClass: Mayhak\StatusBoard\Models\Employee
 
 # Default redirect location
-defaultRedirect: cn/statusboard/employees
+defaultRedirect: Mayhak/statusboard/employees
 
 # Create page
 create:
     title: Create Employees
-    redirect: cn/statusboard/employees/update/:id
-    redirectClose: cn/statusboard/employees
+    redirect: Mayhak/statusboard/employees/update/:id
+    redirectClose: Mayhak/statusboard/employees
 
 # Update page
 update:
     title: Edit Employees
-    redirect: cn/statusboard/employees
-    redirectClose: cn/statusboard/employees
+    redirect: Mayhak/statusboard/employees
+    redirectClose: Mayhak/statusboard/employees
 
 # Preview page
 preview:

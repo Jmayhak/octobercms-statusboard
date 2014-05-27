@@ -1,12 +1,12 @@
-var Cn = {};
+var Mayhak = {};
 
-Cn.StatusBoard = {
-    $statusBoardModal: $('#cnStatusBoardModal'),
-    $statusBoardEmployeeList: $('#cnStatusBoardEmployeeList'),
-    $statusBoardModalFade: $('#cnStatusBoardFade'),
+Mayhak.StatusBoard = {
+    $statusBoardModal: $('#mayhakStatusBoardModal'),
+    $statusBoardEmployeeList: $('#mayhakStatusBoardEmployeeList'),
+    $statusBoardModalFade: $('#mayhakStatusBoardFade'),
     scrollModal: function () {
-        Cn.StatusBoard.$statusBoardModal.css('margin-top', $(window).scrollTop() + 50);
-        Cn.StatusBoard.$statusBoardModalFade.css('margin-top', $(window).scrollTop());
+        Mayhak.StatusBoard.$statusBoardModal.css('margin-top', $(window).scrollTop() + 50);
+        Mayhak.StatusBoard.$statusBoardModalFade.css('margin-top', $(window).scrollTop());
     },
     openModal: function (e) {
 
@@ -20,15 +20,15 @@ Cn.StatusBoard = {
             status: $(this).attr('data-employee-status')
         };
 
-        Cn.StatusBoard.$statusBoardModal.attr('data-employee-id', employee.id);
-        $('#cnStatusBoardEmployeeFullName').html(employee.full_name + ' <small>' + employee.personal_phone + '</small>');
-        $('#cnStatusBoardEmployeeComment').text(employee.comment);
+        Mayhak.StatusBoard.$statusBoardModal.attr('data-employee-id', employee.id);
+        $('#mayhakStatusBoardEmployeeFullName').html(employee.full_name + ' <small>' + employee.personal_phone + '</small>');
+        $('#mayhakStatusBoardEmployeeComment').text(employee.comment);
 
-        $('input[name=cnStatusBoardEmployeeStatus]').prop('checked', false);
+        $('input[name=mayhakStatusBoardEmployeeStatus]').prop('checked', false);
 
-        $('input[name=cnStatusBoardEmployeeStatus][value=' + employee.status + ']').prop('checked', true);
+        $('input[name=mayhakStatusBoardEmployeeStatus][value=' + employee.status + ']').prop('checked', true);
 
-        Cn.StatusBoard.showModal();
+        Mayhak.StatusBoard.showModal();
 
         return false;
     },
@@ -36,7 +36,7 @@ Cn.StatusBoard = {
 
         e.preventDefault();
 
-        Cn.StatusBoard.hideModal();
+        Mayhak.StatusBoard.hideModal();
 
         return false;
     },
@@ -44,35 +44,35 @@ Cn.StatusBoard = {
 
         e.preventDefault();
 
-        var employee_id = Cn.StatusBoard.$statusBoardModal.attr('data-employee-id'),
+        var employee_id = Mayhak.StatusBoard.$statusBoardModal.attr('data-employee-id'),
             status = $(this).attr('data-employee-status');
 
         $.request('statusBoard::onEmployeeUpdate', {
-            update: {'statusBoard::board': '#cnStatusBoardEmployeeList'},
+            update: {'statusBoard::board': '#mayhakStatusBoardEmployeeList'},
             data: {
                 id: employee_id,
                 status: status
             }
         });
 
-        Cn.StatusBoard.hideModal();
+        Mayhak.StatusBoard.hideModal();
 
         return false;
     },
     showModal: function () {
-        Cn.StatusBoard.$statusBoardModal.css('display', 'block');
-        Cn.StatusBoard.$statusBoardModalFade.css('display', 'block')
+        Mayhak.StatusBoard.$statusBoardModal.css('display', 'block');
+        Mayhak.StatusBoard.$statusBoardModalFade.css('display', 'block')
     },
     hideModal: function () {
-        Cn.StatusBoard.$statusBoardModal.css('display', 'none');
-        Cn.StatusBoard.$statusBoardModalFade.css('display', 'none')
+        Mayhak.StatusBoard.$statusBoardModal.css('display', 'none');
+        Mayhak.StatusBoard.$statusBoardModalFade.css('display', 'none')
 
     }
 };
 
 jQuery(function ($) {
-    Cn.StatusBoard.$statusBoardEmployeeList.on('tap', 'div.cn-statusboard-employee', Cn.StatusBoard.openModal);
-    Cn.StatusBoard.$statusBoardModal.on('tap click', 'div.cn-statusboard-update', Cn.StatusBoard.updateEmployee);
-    Cn.StatusBoard.$statusBoardModal.on('tap click', 'div.cn-statusboard-cancel', Cn.StatusBoard.closeModal);
-    $(document).on('scroll', window, Cn.StatusBoard.scrollModal);
+    Mayhak.StatusBoard.$statusBoardEmployeeList.on('tap click', 'div.mayhak-statusboard-employee', Mayhak.StatusBoard.openModal);
+    Mayhak.StatusBoard.$statusBoardModal.on('tap click', 'div.mayhak-statusboard-update', Mayhak.StatusBoard.updateEmployee);
+    Mayhak.StatusBoard.$statusBoardModal.on('tap click', 'div.mayhak-statusboard-cancel', Mayhak.StatusBoard.closeModal);
+    $(document).on('scroll', window, Mayhak.StatusBoard.scrollModal);
 });

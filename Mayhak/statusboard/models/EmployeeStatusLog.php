@@ -1,4 +1,4 @@
-<?php namespace Cn\StatusBoard\Models;
+<?php namespace Mayhak\StatusBoard\Models;
 
 use Model;
 
@@ -11,7 +11,7 @@ class EmployeeStatusLog extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'cn_statusboard_employee_status_logs';
+    public $table = 'mayhak_statusboard_employee_status_logs';
 
     /**
      * @var array Guarded fields
@@ -21,7 +21,7 @@ class EmployeeStatusLog extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = ['status', 'comment', 'cn_statusboard_employee_id'];
+    protected $fillable = ['status', 'comment', 'mayhak_statusboard_employee_id'];
 
     /**
      * @var array Validation rules
@@ -34,7 +34,7 @@ class EmployeeStatusLog extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [
-        'employee' => ['Employee', 'foreignKey' => 'cn_statusboard_employee_id']
+        'employee' => ['Employee', 'foreignKey' => 'mayhak_statusboard_employee_id']
     ];
     public $belongsToMany = [];
     public $morphTo = [];

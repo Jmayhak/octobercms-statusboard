@@ -1,4 +1,4 @@
-<?php namespace Cn\StatusBoard\Updates;
+<?php namespace Mayhak\StatusBoard\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
@@ -8,7 +8,7 @@ class CreateEmployeesTable extends Migration
 
     public function up()
     {
-        Schema::create('cn_statusboard_employees', function($table)
+        Schema::create('mayhak_statusboard_employees', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -21,7 +21,7 @@ class CreateEmployeesTable extends Migration
 
     public function down()
     {
-        Schema::drop('cn_statusboard_employees');
+        Schema::drop('mayhak_statusboard_employees');
     }
 
 }

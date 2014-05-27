@@ -1,4 +1,4 @@
-<?php namespace Cn\StatusBoard\Models;
+<?php namespace Mayhak\StatusBoard\Models;
 
 use Model;
 
@@ -11,7 +11,7 @@ class Employee extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'cn_statusboard_employees';
+    public $table = 'mayhak_statusboard_employees';
 
     /**
      * @var array Guarded fields
@@ -33,7 +33,7 @@ class Employee extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'logs' => ['\Cn\StatusBoard\Models\EmployeeStatusLog', 'primaryKey' => 'cn_statusboard_employee_id']
+        'logs' => ['\mayhak\StatusBoard\Models\EmployeeStatusLog', 'primaryKey' => 'mayhak_statusboard_employee_id']
     ];
     public $belongsTo = [];
     public $belongsToMany = [];
