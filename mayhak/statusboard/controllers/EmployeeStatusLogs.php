@@ -20,6 +20,6 @@ class EmployeeStatusLogs extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Mayhak.StatusBoard', 'statusboard', 'employeestatuslogs');
+        BackendMenu::setContext('Mayhak.StatusBoard', 'statusboard', 'logs');
     }
 }

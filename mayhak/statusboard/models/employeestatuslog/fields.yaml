@@ -3,7 +3,7 @@
 # ===================================
 
 fields:
-    Mayhak_statusboard_employee_id:
+    mayhak_statusboard_employee_id:
         label: Employee
     status:
         label: Status
